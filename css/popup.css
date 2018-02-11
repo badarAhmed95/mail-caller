@@ -1,0 +1,58 @@
+body {
+    width: 400px;
+    margin: 0;
+}
+
+div#popupHeading {
+    width: inherit;
+    background-color: #0dc143;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 10px 0 10px 0;
+}
+div#popupHeading h1{
+    margin: 0;
+}
+
+div#popupBody {
+    background-color: #f2f2f2;
+}
+div#toggleScrapperActivation {
+    background-color: grey;
+    padding: 10px 0 10px 0;
+}
+div#toggleScrapperActivation p{
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+}
+button#tglBtn {
+    background-color: #0dc143;
+    color: white;
+    margin-left: 120px;
+    border-radius: 5px;
+}
+div#scrappedInfo {
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.list-div {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+}
+
+div.list-download {
+    padding-top: 15px;
+    margin-left: 100px;
+}
+
+button.csv-dwnld {
+    background-color: #0dc143;
+    color: white;
+    border-radius: 5px;
+}

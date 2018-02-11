@@ -1,0 +1,58 @@
+{
+  "name": "Mail Caller",
+  "description": "Send mails securelly with Mail Caller.",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "19" : "resources/images/icon_extension_19.png",
+    "32" : "resources/images/icon_extension_32.png",
+    "128" : "resources/images/icon_extension_128.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19" : "resources/images/icon_extension_19.png",
+      "32" : "resources/images/icon_extension_32.png",
+      "128" : "resources/images/icon_extension_128.png"
+    },
+    "default_title": "Mail Caller",
+    "default_popup": "html/popup.html"
+  },
+  "background": {
+    "scripts": [
+      "scripts/vendor/jquery-3.2.1.min.js",
+      "scripts/common/firebase.js",
+      "scripts/background/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/mail/*"],
+      "js": [
+        "scripts/vendor/jquery-3.2.1.min.js",
+        "scripts/vendor/arrive.min.js",
+        "scripts/contentscript/config.js",
+        "scripts/contentscript/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "identity",
+    "tabs",
+    "storage",
+    "downloads",
+    "https://mail.google.com/mail/",
+    "<all_urls>",
+    "https://*/*",
+    "activeTab"
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com https://www.googleapis.com https://securetoken.googleapis.com; object-src 'self'"
+}
+
+
+
+
+
+
